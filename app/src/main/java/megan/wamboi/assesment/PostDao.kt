@@ -1,6 +1,8 @@
 package megan.wamboi.assesment
 
 import androidx.lifecycle.LiveData
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 
 
 @Dao
@@ -21,4 +23,4 @@ annotation class Dao
 
 annotation class Query(val value: String)
 
-annotation class Insert(val onConflict: Any)
+

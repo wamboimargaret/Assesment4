@@ -1,11 +1,13 @@
 package megan.wamboi.assesment
 
 import android.content.Context
-
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
 
 
 @Database(entities = arrayOf(Post::class), version = 1)
-abstract class PostDb:RoomDatabase() {
+abstract class PostDb: RoomDatabase() {
     abstract fun getPostDao():PostDao
     companion object{
         private var database: PostDb? = null
@@ -20,3 +22,5 @@ abstract class PostDb:RoomDatabase() {
         }
     }
 }
+
+
